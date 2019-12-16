@@ -11,26 +11,26 @@
 </head>
 
 <body>
-  <section id="all-tasks">
-    <div class="header">
+  <div id="all-tasks">
+    <section class="header">
       <div class="top">
         <div class="logo">
           Task Manager
         </div>
         <div class="tasks-total">
-          <div class="tasks"><span class="number">13</span> Tasks</div>
+          <div class="tasks"><span class="number">5</span> Tasks</div>
 
-          <div class="tasks"><span class="number">4</span> Completed</div>
+          <div class="tasks"><span class="number">3</span> Completed</div>
         </div>
         <div class="add-circle"><i class="fas fa-plus-circle"></i></div>
       </div>
-    </div>
-    <div class="content-area">
+    </section>
+    <section class="content-area">
       <div class="content-container">
         <div class="tasks-container">
           <div class="task-box">
             <div class="title">
-              Code some stuff
+              Clean room
               <div class="date">Created: December 15, 2019</div>
               <div class="check-box">
                 <i class="fas fa-check"></i>
@@ -39,14 +39,89 @@
           </div>
           <div class="task-box">
             <div class="title">
-              Code some stuff
+              Finish homework
               <div class="date">Created: December 15, 2019</div>
+              <div class="check-box">
+                <i class="fas fa-check"></i>
+              </div>
             </div>
           </div>
+          <div class="task-box">
+            <div class="title">
+              Cook dinner
+              <div class="date">Created: December 15, 2019</div>
+              <div class="check-box">
+                <i class="fas fa-check"></i>
+              </div>
+            </div>
+          </div>
+          <div class="task-box">
+            <div class="title">
+              Walk big boi
+              <div class="date">Created: December 15, 2019</div>
+              <!-- <div class="check-box">
+                <i class="fas fa-check"></i>
+              </div> -->
+            </div>
+          </div>
+          <div class="task-box">
+            <div class="title">
+              Code before bed
+              <div class="date">Created: December 15, 2019</div>
+              <!-- <div class="check-box">
+                <i class="fas fa-check"></i>
+              </div> -->
+            </div>
+          </div>
+
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <section class="task-form">
+      <div class="close-btn">
+        <i class="fas fa-times"></i>
+      </div>
+      <form>
+        <h3>Add a task</h3>
+        <div class="form-group">
+          <label for="title">Title:</label>
+          <input type="text" name="title" />
+        </div>
+        <div class="form-group">
+          <label for="category">Category:</label>
+          <input type="text" name="category" />
+        </div>
+        <div class="form-group">
+          <label for="notes">Notes:</label>
+          <textarea name="notes" cols="30" rows="5"></textarea>
+        </div>
+        <button type="submit">Add New Task</button>
+      </form>
+    </section>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      $('.add-circle').on('click', function () {
+        $('.task-form').addClass('active')
+      })
+
+      $('.task-form .close-btn').on('click', function () {
+        $('.task-form').removeClass('active')
+      })
+    });
+    // $(document).ready(function(){
+    //   $('.add-circle, .close-btn').on('click', function(){
+    //     $('.task-form').slideToggle()
+    //   });
+    // });
+  </script>
+
 </body>
 
 </html>

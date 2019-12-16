@@ -20,6 +20,7 @@ $gold: #FFBF3E;
             background: rgba(58, 71, 147, .5);
             padding: 50px 13px;
             text-align: right;
+            position: relative;
 
             .logo {
                 font-family: 'Megrim', cursive;
@@ -196,4 +197,90 @@ $gold: #FFBF3E;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+    width: 100%;
+}
+
+//TODO make task form responsive
+//LAPTOPS
+@media screen and (min-width: 1200px) {}
+
+//TABLETS
+@media screen and (max-width: 1199px) {}
+
+//PHONES
+@media screen and (max-width: 767px) {
+    #all-tasks {
+        .header {
+            .add-circle {
+                background: black;
+                border-radius: 50%;
+                position: absolute;
+                top: 102px;
+                right: 25px;
+                padding: 8px 8px;
+            }
+
+            .top {
+                .tasks-total {
+                    top: 0;
+
+                    .task {
+                        display: block;
+
+                        .number {
+                            color: #9787EE;
+                            font-weight: 500;
+                            font-size: 24px;
+                            margin: 0 10px 0 0;
+                            position: relative;
+                            top: 3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//XS PHONE
+@media screen and (max-width: 376px) {
+    #all-tasks {
+        .header {
+            .add-circle {
+                background: black;
+                border-radius: 50%;
+                position: absolute;
+                top: 141px;
+                right: 25px;
+                padding: 8px 8px;
+            }
+
+            .top {
+                .logo {
+                    float: none;
+                    text-align: center;
+                    margin: 0 0 15px 0;
+                }
+
+                .tasks-total {
+                    top: 0;
+                    text-align: center;
+
+                    .task {
+                        display: inline-block;
+
+                        .number {
+                            color: #9787EE;
+                            font-weight: 500;
+                            font-size: 24px;
+                            margin: 0 10px 0 0;
+                            position: relative;
+                            top: 3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
